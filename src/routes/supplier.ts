@@ -1,9 +1,9 @@
 import express from 'express';
+import { addSupplier, listSuppliers } from './../controller/supplier';
 
 const router = express.Router();
 
-router.get('/list', (req, res) => {
-  return res.json('supplier List');
-});
+router.post('/add', addSupplier);
+router.get('/list', listSuppliers);
 
 export default router;

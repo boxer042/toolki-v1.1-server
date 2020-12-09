@@ -30,6 +30,7 @@ mongoose
   });
 
 app.use(cors());
+app.use(express.json());
 app.use('/api', authRoutes);
 app.use('/purchase', purchaseRoutes);
 app.use('/supplier', supplierRoutes);
