@@ -4,7 +4,7 @@ import Supplier from './../models/supplier';
 export const listSuppliers = async (req: Request, res: Response) => {
   try {
     const suppliers = await Supplier.find({}).exec();
-    res.status(200).json({ suppliers });
+    res.status(200).json(suppliers);
   } catch (error) {
     res.status(400).json({ error: error.toString() });
   }

@@ -1,5 +1,13 @@
 import mongoose from 'mongoose';
 
+/**
+ * name : 거래처 이름
+ * address : 거래처 주소
+ * phoneNumber : 거래처 전화번호
+ * faxNumber : 거래처 팩스번호
+ * cellphoneNumber : 거래처 핸드폰번호
+ * remark : 비고
+ */
 const SupplierSchema = new mongoose.Schema(
   {
     name: {
@@ -13,10 +21,10 @@ const SupplierSchema = new mongoose.Schema(
       trim: true,
     },
     phoneNumber: {
-      type: Number,
+      type: String,
     },
-    faxNumber: { type: Number },
-    cellphoneNumber: { type: Number },
+    faxNumber: { type: String },
+    cellphoneNumber: { type: String },
     remark: {
       type: String,
       trim: true,
