@@ -6,7 +6,7 @@ import purchaseRoutes from './routes/purchase';
 import supplierRoutes from './routes/supplier';
 
 import cors from 'cors';
-
+//pts9LrpavpsbdlHJ
 const {
   MONGO_DB_USER,
   MONGO_DB_PASSWORD,
