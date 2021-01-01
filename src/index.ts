@@ -3,10 +3,10 @@ import 'dotenv/config';
 import mongoose from 'mongoose';
 import authRoutes from './routes/auth';
 import purchaseRoutes from './routes/purchase';
-import supplierRoutes from './routes/supplier';
+import accountRoutes from './routes/account';
 
 import cors from 'cors';
-//pts9LrpavpsbdlHJ
+
 const {
   MONGO_DB_USER,
   MONGO_DB_PASSWORD,
@@ -33,7 +33,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/api', authRoutes);
 app.use('/purchase', purchaseRoutes);
-app.use('/supplier', supplierRoutes);
+app.use('/account', accountRoutes);
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`);
