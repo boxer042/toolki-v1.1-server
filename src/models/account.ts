@@ -54,6 +54,10 @@ const AccountSchema = new mongoose.Schema(
         trim: true,
       },
     },
+    favorites: {
+      type: Boolean,
+      default: false,
+    },
     remark: {
       type: String,
       trim: true,
