@@ -10,6 +10,21 @@ export const listAccounts = async (req: Request, res: Response) => {
   }
 };
 
+export const getAccount = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  let account;
+  try {
+    account = await Account.findById(id).exec();
+  } catch (err) {
+    return res.status(500).json({ status: '500', message: err.toString() });
+  }
+  if (!account) {
+    res.status(404).json({ status: '404', message: 'Account Not Found!' });
+    return;
+  }
+  res.status(200).json(account);
+};
+
 export const addAccount = async (req: Request, res: Response) => {
   const { name, contact, manager, detail, remark, favorites } = req.body;
 
